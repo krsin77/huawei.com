@@ -1,0 +1,89 @@
+@charset "utf-8";
+.header {
+  height: 50px;
+  background-color: #f2f2f2;
+}
+.header .logo {
+  float: left;
+  margin-top: 10px;
+  padding: 0 15px;
+}
+.header .logo img {
+  height: 28px;
+  width: 110px;
+}
+.header .header-title {
+  border-left: 1px solid #ccc;
+  float: left;
+  margin-top: 15px;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.login-card {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+.login-card h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 70px;
+}
+.login-left {
+  float: left;
+  width: 449px;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+.login-left > span {
+  font-size: 12px;
+  color: #ccc;
+}
+.ewm {
+  margin-left: 160px;
+  margin-bottom: 30px;
+}
+.login-right {
+  float: left;
+  width: 449px;
+  text-align: center;
+}
+.login-right input {
+  width: 350px;
+  height: 50px;
+  background-color: #f2f2f2;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-indent: 10px;
+}
+.login-right input[type="submit"] {
+  background-color: #eba7aa;
+  text-indent: 0;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.foot {
+  padding-top: 30px;
+  width: 600px;
+  margin: 0 auto;
+}
+.foot-top > span > a {
+  padding: 0 10px;
+  color: black;
+  border-right: 2px solid #ccc;
+}
+.foot-top > span > a:hover {
+  text-decoration: underline;
+}
+.foot-bottom {
+  margin-top: 10px;
+  text-align: center;
+  color: #ccc;
+}

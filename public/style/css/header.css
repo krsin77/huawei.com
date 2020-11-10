@@ -1,0 +1,268 @@
+@charset "utf-8";
+.header {
+  background: #2b2a2a;
+}
+.header > .content {
+  margin: 0 auto;
+  width: 1220px;
+  height: 40px;
+}
+.header .content .nav {
+  position: relative;
+}
+.content .nav1 {
+  width: 600px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  position: relative;
+}
+.content .nav1 li {
+  float: left;
+  padding: 0 8px;
+  line-height: 40px;
+  position: relative;
+}
+.content .nav1 li a {
+  color: #c5c2c2;
+  font-size: 13px;
+}
+.content .nav2 {
+  display: inline-block;
+  width: 450px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  right: 0;
+}
+.content .nav2 li {
+  float: right;
+  padding: 0 8px;
+  text-align: center;
+  position: relative;
+}
+.content .nav2 li a {
+  color: #c5c2c2;
+  font-size: 13px;
+}
+.nav1 > li:hover > a {
+  color: white;
+}
+.nav1 > li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #706f6f;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.nav2 > li:hover > a {
+  color: white;
+}
+.nav2 > li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #706f6f;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+/* 二级导航 */
+/* 有下拉效果的导航项设置  更多精彩 */
+.top-nav-list {
+  padding: 0!important;
+}
+.top-nav-list p {
+  padding: 0 8px;
+}
+.top-nav-list span {
+  color: #afafaf;
+  font-size: 13px;
+}
+.top-nav-list span::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../../images/icon-common.svg) no-repeat -68px 8px;
+}
+.top-nav-list:hover p {
+  background: #fff;
+  position: relative;
+  z-index: 2478;
+}
+.top-nav-list:hover span {
+  color: #f00;
+}
+.top-nav-list:hover span:after {
+  background-position: -81px 8px;
+}
+.top-nav-list:hover::before {
+  content: none;
+}
+.top-nav-list:hover .head-top-subnav {
+  display: block;
+}
+.top-nav-list:hover .service {
+  display: block;
+}
+.head-top-subnav {
+  background: #fff;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 0px 1px 0 #ccc;
+  width: 110px;
+  line-height: 28px;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 2456;
+  right: 0;
+  display: none;
+}
+.head-top-subnav a {
+  color: #000;
+}
+.head-top-subnav > ul {
+  width: 110px;
+  text-align: center;
+}
+.head-top-subnav > ul > li {
+  height: 30px;
+  width: 90px;
+}
+.head-top-subnav > ul > li > a:hover {
+  color: red;
+}
+.nobefore::before {
+  content: none !important;
+}
+.service {
+  background: #fff;
+  width: 90px;
+  line-height: 28px;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 2456;
+  right: 0;
+  display: none;
+  border-radius: 0 0 15px 15px;
+}
+.service a {
+  color: #000;
+}
+.service > ul {
+  width: 90px;
+  text-align: center;
+}
+.service > ul > li {
+  width: 80px;
+}
+.service > ul > li > a:hover {
+  color: red;
+}
+.header-bottom {
+  height: 100px;
+}
+.header-bottom .logo {
+  float: left;
+  height: 100px;
+}
+.header-bottom .logo img {
+  width: 250px;
+  margin: 30px 10px;
+}
+.header-bottom .header-btn {
+  float: left;
+  overflow: hidden;
+}
+.header-bottom .header-btn .btn {
+  width: 600px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+.header-bottom .content {
+  margin: 0 auto;
+  width: 80%;
+  height: 100px;
+}
+.btn > li {
+  width: 100px;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 20px;
+}
+.btn > li:hover a {
+  color: brown;
+}
+.btn > .pink {
+  width: 80px;
+  background: pink;
+  border-radius: 20px;
+}
+.btn > .pink:hover {
+  opacity: 0.8;
+}
+.btn > .pink:hover a {
+  color: #fff;
+}
+.btn > .pink > a {
+  color: white;
+  font-size: 14px;
+}
+.btn > .blue {
+  width: 80px;
+  background: #19aaee;
+  border-radius: 20px;
+}
+.btn > .blue:hover {
+  opacity: 0.8;
+}
+.btn > .blue:hover a {
+  color: #fff;
+}
+.btn > .blue > a {
+  color: white;
+  font-size: 14px;
+}
+.btn li a {
+  color: black;
+}
+.search {
+  height: 100px;
+  float: right;
+  position: relative;
+}
+.search form {
+  margin-top: 35px;
+  position: relative;
+}
+.search form a {
+  color: #b1b1b1;
+  position: absolute;
+  top: 6px;
+  font-size: 13px;
+}
+.input-txt {
+  width: 200px;
+  height: 30px;
+  float: left;
+  background: #ebebeb;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  border: none;
+}
+.input-btn {
+  width: 50px;
+  height: 30px;
+  float: left;
+  background: #ebebeb;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+  border: none;
+}
