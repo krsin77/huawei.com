@@ -115,6 +115,7 @@
 .des-phone ul li a {
   width: 100px;
   height: 40px;
+  color: #000;
 }
 .des-phone ul li img {
   margin-left: -5px;
@@ -134,7 +135,12 @@
 }
 .des-edition > span {
   font-size: 12px;
-  margin-right: 10px;
+  margin-right: 20px;
+  position: relative;
+  top: -10px;
+}
+.des-edition > em {
+  font-size: 12px;
   position: relative;
   top: -10px;
 }

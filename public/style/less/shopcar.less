@@ -1,0 +1,362 @@
+@charset "utf-8";
+.header {
+    background: rgb(249,249,249);
+    & > .content {
+      margin: 0 auto;
+      width: 1220px;
+      height: 40px;
+    }
+    .content {
+      .nav {
+        position: relative;
+      }
+    }
+  }
+  .content {
+    .nav1 {
+      width: 600px;
+      height: 40px;
+      line-height: 40px;
+      float: left;
+      position: relative;
+      li {
+        float: left;
+        padding: 0 8px;
+        line-height: 40px;
+        position: relative;
+        a {
+          color: rgb(197, 194, 194);
+          font-size: 13px;
+        }
+      }
+    }
+    .nav2 {
+      display: inline-block;
+      width: 450px;
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+      right: 0;
+      li {
+        float: right;
+        padding: 0 8px;
+        text-align: center;
+        position: relative;
+        a {
+          color: rgb(197, 194, 194);
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .nav1 {
+    & > li {
+      &:hover {
+        & > a {
+          color: brown;
+        }
+      }
+      &::before {
+        content: "";
+        width: 1px;
+        height: 12px;
+        background: rgb(112, 111, 111);
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+    }
+  }
+  .nav2 {
+    & > li {
+      &:hover {
+        & > a {
+          color: brown;
+        }
+      }
+      &::before {
+        content: "";
+        width: 1px;
+        height: 12px;
+        background: rgb(112, 111, 111);
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+    }
+  }
+  /* 二级导航 */
+  /* 有下拉效果的导航项设置  更多精彩 */
+  .top-nav-list {
+    padding: 0!important;
+    p {
+      padding: 0 8px;
+    }
+    span {
+      color: #afafaf;
+      font-size: 13px;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../../images/icon-common.svg) no-repeat -68px 8px;
+      }
+    }
+    &:hover {
+      p {
+        background: #fff;
+        position: relative;
+        z-index: 2478;
+      }
+      span {
+        color:brown;
+        &:after {
+          background-position: -81px 8px;
+        }
+      }
+      &::before {
+        content: none;
+      }
+      .head-top-subnav {
+        display: block;
+      }
+      .service{
+        display: block;
+      }
+    }
+  }
+  .head-top-subnav {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0px 1px 0 #ccc;
+    width: 110px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 2456;
+    right: 0;
+    display: none;
+    a {
+      color: #000;
+    }
+    & > ul {
+      width: 110px;
+      text-align: center;
+      & > li {
+        height: 30px;
+
+        width: 90px;
+        & > a {
+          &:hover {
+            color: brown;
+          }
+        }
+      }
+    }
+  }
+  .nobefore {
+    &::before {
+      content: none !important;
+    }
+  }
+  .service {
+    background: #fff;
+    width: 90px;
+    line-height: 28px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 2456;
+    right: 0;
+    display: none;
+    border-radius: 0 0 15px 15px;
+    a {
+      color: #000;
+    }
+    & > ul {
+      width: 90px;
+      text-align: center;
+      & > li {
+        width: 80px;
+        & > a {
+          &:hover {
+            color: brown;
+          }
+        }
+      }
+    }
+  }
+  .header-bottom{
+      height: 50px;
+      padding: 10px 0;
+      .header-left{
+        float: left;
+        img{
+            height: 36px;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: 30px;
+        }
+        h1{
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            display: inline-block;
+            padding-top: 5px;
+        }
+      }
+      .header-right{
+        float: right;
+        width: 360px;
+        height: 50px;
+        background: url(../../images/shopcar.svg) no-repeat;
+        background-position: 0 -20px;
+    }
+  }
+  .car{
+      padding: 20px 0;
+      background-color: rgb(245,245,245);
+      .car-top{
+          padding-left: 40px;
+          height: 40px;
+          line-height: 40px;
+          background-color: #fff;
+          label{
+            float: left;
+            width: 150px;
+            color: rgb(164,164,164);
+            input{
+                margin-right: 10px;
+            }
+        }
+        ul{
+            float: left;
+            li{
+                color: rgb(164,164,164);
+                width: 100px;
+                float: left;
+                margin-left: 35px;
+                text-align: center;
+                &:first-child{
+                  width: 450px;
+                  margin-left: 0;
+                  margin-right: 35px;
+                  text-align: left;
+                }
+            }
+        }
+      }
+      .car-main{
+          margin-top: 10px;
+          form{
+              .pro-box{
+                padding: 20px 0 20px 40px;
+                background-color: #fff;
+                margin-bottom: 10px;
+              }
+              label{
+                  margin-top: 43px;
+                  float: left;
+              }
+              .car-pro{
+                  float: left;
+                  width: 1160px;
+                  .pro-img{
+                      width: 100px;
+                      height: 100px;
+                      float: left;
+                      margin-right: 20px;
+                      img{
+                          width: 100%;
+                          height: 100%;
+                      }
+
+                  }
+                  ul{
+                    float: left;
+                    margin-left: 15px;
+                      li{
+                          float: left;
+                          width: 100px;
+                          margin-left: 35px;
+                          text-align: center;
+                          a{
+                              color: #000;
+                          }
+                          p{
+                            margin-top: 5px;
+                          }
+                          &:first-child{
+                            width: 450px;
+                            margin-left: 0;
+                            margin-right: 35px;
+                            text-align: left;
+                          } 
+                      }
+                      .num-btn{
+                        input{
+                            width: 40px;
+                            height: 20px;
+                            -webkit-appearance: none;
+                        }  
+                      }
+                      .price-total{
+                        color: rgb(226, 19, 19);
+                        font-weight: 600;
+                    }
+                  }
+              }
+          }
+      } 
+      .car-bottom{
+          height: 60px;
+          background-color: #fff;
+          padding-left: 40px;
+          .bot-left{
+              float: left;
+              line-height: 60px;
+              label{
+                  margin-right: 10px;
+                 input{
+                  margin-right: 10px;
+                } 
+              }
+              a{
+                  color: #000;
+              }
+              
+
+          }
+          .bot-right{
+              float: right;
+              .pay-btn{
+                  float: right;
+                  margin-left: 20px;
+                  a{
+                    width: 180px;
+                    height: 60px;
+                    line-height: 60px;
+                    display: block;
+                    background: rgb(226, 0, 0);
+                    font-size: 18px;
+                    color: #fff;
+                    text-align: center;
+                  }
+              }
+              .pay-price{
+                  float: right;
+                  height: 60px;
+                  line-height: 60px;
+                  p{
+                      span{
+                          color: red;
+                          font-size: 20px;
+                          font-weight: 600;
+                      }
+                  }
+              }
+          }
+      }
+    }

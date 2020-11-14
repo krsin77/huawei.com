@@ -4,14 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品详情</title>
-    <link rel="stylesheet" href="../style/iconfont/iconfont.css">
+    <title>我的购物车</title>
     <link rel="stylesheet" href="../style/css/reset.css">
-    <link rel="stylesheet" href="../style/css/header.css">
-    <link rel="stylesheet" href="../style/css/product.css">
+    <link rel="stylesheet" href="../style/css/shopcar.css">
     <link rel="stylesheet" href="../style/css/footer.css">
-    <script src="../js/product.js" type="module"></script>
-    <script src="../js/library/jquery.js"></script>
+    <script src="../js/shopcar.js" type="module"></script>
 </head>
 
 <body>
@@ -30,7 +27,7 @@
                         <p><span>更多精彩</span></p>
                         <!-- 二级效果 -->
                         <div class="head-top-subnav">
-                            <ul>
+                            <ul class="clearfix">
                                 <li>
                                     <a href="#">EMUI</a>
                                 </li>
@@ -48,14 +45,14 @@
                     </li>
                 </ul>
                 <ul class="nav2">
-                    <li><a href="./shopcar.html">购物车</a></li>
+                    <li><a href="">购物车</a></li>
                     <li><a href="">手机版</a></li>
                     <li><a href="">网站导航</a></li>
                     <li class="top-nav-list">
                         <p><span>客服服务</span></p>
                         <!-- 二级效果 -->
-                        <div class="head-top-subnav service">
-                            <ul>
+                        <div class="service">
+                            <ul class="clearfix">
                                 <li>
                                     <a href="#">服务中心</a>
                                 </li>
@@ -66,61 +63,64 @@
                         </div>
                     </li>
                     <li><a href="">我的订单</a></li>
-                    <li><a href="./reg.html">注册</a></li>
-                    <li class="nobefore"><a href="./login.html">请登录</a></li>
+                    <li><a href="./html/reg.html">注册</a></li>
+                    <li class="nobefore"><a href="./html/login.html">请登录</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <div class="header-bottom clearfix">
-        <div class="content">
-            <div class="logo">
-                <img src="../images/logo.png" alt="">
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-left">
+                <img src="../images/car-logo.png" alt="">
+                <h1>我的购物车</h1>
             </div>
-            <div class="header-btn">
-                <ul class="btn">
-                    <li class="pink"><a href="">华为专区</a></li>
-                    <li class="blue"><a href="">荣耀专区</a></li>
-                    <li><a href="">华为P40系列</a></li>
-                    <li><a href="">荣耀30系列</a></li>
-                    <li><a href="">智能家居</a></li>
+            <div class="header-right">
+
+            </div>
+        </div>
+    </div>
+    <div class="car">
+        <div class="container">
+            <div class="car-top">
+                <label for="">
+                    <input type="checkbox">
+                    全选
+                </label>
+                <ul class="clearfix">
+                    <li>商品</li>
+                    <li>单价</li>
+                    <li>数量</li>
+                    <li>小计</li>
+                    <li>操作</li>
                 </ul>
             </div>
-            <div class="search">
-                <form action="" method="POST">
-                    <input type="text" class="input-txt">
-                    <input type="submit" class="input-btn btn iconfont" value="&#xe62b;">
-                    <a href="" style="left: 120px">P40</a>
-                    <a href="" style="left: 155px;">荣耀30</a>
+            <div class="car-main">
+                <form action="" class="clearfix">
                 </form>
             </div>
+            <div class="car-bottom clearfix">
+                <div class="bot-left">
+                    <label for="">
+                    <input type="checkbox">
+                    全选
+                    </label>
+                    <a href="">删除</a>
+                </div>
+                <div class="bot-right">
+                    <div class="pay-btn">
+                        <a href="">立即结算</a>
+                    </div>
+                    <div class="pay-price">
+                        <p>
+                            <label for="">总计：</label>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="hrshadow"></div>
-
-    <div class="line">
-        <div class="container">
-
-        </div>
-    </div>
-
-    <div class="product">
-        <div class="container">
-
-        </div>
-    </div>
-
-    <div class="detail">
-        <div class="detail-top">
-            <p>商品详情</p>
-        </div>
-        <div class="detail-main">
-
-        </div>
-    </div>
-
     <div class="footer">
         <div class="container">
             <div class="footer-top">
@@ -238,8 +238,7 @@
                 </div>
             </div>
         </div>
-    </div>c
-
+    </div>
 </body>
 
 </html>

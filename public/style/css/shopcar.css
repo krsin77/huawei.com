@@ -1,0 +1,328 @@
+@charset "utf-8";
+.header {
+  background: #f9f9f9;
+}
+.header > .content {
+  margin: 0 auto;
+  width: 1220px;
+  height: 40px;
+}
+.header .content .nav {
+  position: relative;
+}
+.content .nav1 {
+  width: 600px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  position: relative;
+}
+.content .nav1 li {
+  float: left;
+  padding: 0 8px;
+  line-height: 40px;
+  position: relative;
+}
+.content .nav1 li a {
+  color: #c5c2c2;
+  font-size: 13px;
+}
+.content .nav2 {
+  display: inline-block;
+  width: 450px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  right: 0;
+}
+.content .nav2 li {
+  float: right;
+  padding: 0 8px;
+  text-align: center;
+  position: relative;
+}
+.content .nav2 li a {
+  color: #c5c2c2;
+  font-size: 13px;
+}
+.nav1 > li:hover > a {
+  color: brown;
+}
+.nav1 > li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #706f6f;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.nav2 > li:hover > a {
+  color: brown;
+}
+.nav2 > li::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background: #706f6f;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+/* 二级导航 */
+/* 有下拉效果的导航项设置  更多精彩 */
+.top-nav-list {
+  padding: 0!important;
+}
+.top-nav-list p {
+  padding: 0 8px;
+}
+.top-nav-list span {
+  color: #afafaf;
+  font-size: 13px;
+}
+.top-nav-list span::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../../images/icon-common.svg) no-repeat -68px 8px;
+}
+.top-nav-list:hover p {
+  background: #fff;
+  position: relative;
+  z-index: 2478;
+}
+.top-nav-list:hover span {
+  color: brown;
+}
+.top-nav-list:hover span:after {
+  background-position: -81px 8px;
+}
+.top-nav-list:hover::before {
+  content: none;
+}
+.top-nav-list:hover .head-top-subnav {
+  display: block;
+}
+.top-nav-list:hover .service {
+  display: block;
+}
+.head-top-subnav {
+  background: #fff;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 0px 1px 0 #ccc;
+  width: 110px;
+  line-height: 28px;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 2456;
+  right: 0;
+  display: none;
+}
+.head-top-subnav a {
+  color: #000;
+}
+.head-top-subnav > ul {
+  width: 110px;
+  text-align: center;
+}
+.head-top-subnav > ul > li {
+  height: 30px;
+  width: 90px;
+}
+.head-top-subnav > ul > li > a:hover {
+  color: brown;
+}
+.nobefore::before {
+  content: none !important;
+}
+.service {
+  background: #fff;
+  width: 90px;
+  line-height: 28px;
+  padding-bottom: 10px;
+  position: absolute;
+  z-index: 2456;
+  right: 0;
+  display: none;
+  border-radius: 0 0 15px 15px;
+}
+.service a {
+  color: #000;
+}
+.service > ul {
+  width: 90px;
+  text-align: center;
+}
+.service > ul > li {
+  width: 80px;
+}
+.service > ul > li > a:hover {
+  color: brown;
+}
+.header-bottom {
+  height: 50px;
+  padding: 10px 0;
+}
+.header-bottom .header-left {
+  float: left;
+}
+.header-bottom .header-left img {
+  height: 36px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 30px;
+}
+.header-bottom .header-left h1 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  display: inline-block;
+  padding-top: 5px;
+}
+.header-bottom .header-right {
+  float: right;
+  width: 360px;
+  height: 50px;
+  background: url(../../images/shopcar.svg) no-repeat;
+  background-position: 0 -20px;
+}
+.car {
+  padding: 20px 0;
+  background-color: #f5f5f5;
+}
+.car .car-top {
+  padding-left: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+}
+.car .car-top label {
+  float: left;
+  width: 150px;
+  color: #a4a4a4;
+}
+.car .car-top label input {
+  margin-right: 10px;
+}
+.car .car-top ul {
+  float: left;
+}
+.car .car-top ul li {
+  color: #a4a4a4;
+  width: 100px;
+  float: left;
+  margin-left: 35px;
+  text-align: center;
+}
+.car .car-top ul li:first-child {
+  width: 450px;
+  margin-left: 0;
+  margin-right: 35px;
+  text-align: left;
+}
+.car .car-main {
+  margin-top: 10px;
+}
+.car .car-main form .pro-box {
+  padding: 20px 0 20px 40px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.car .car-main form label {
+  margin-top: 43px;
+  float: left;
+}
+.car .car-main form .car-pro {
+  float: left;
+  width: 1160px;
+}
+.car .car-main form .car-pro .pro-img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+.car .car-main form .car-pro .pro-img img {
+  width: 100%;
+  height: 100%;
+}
+.car .car-main form .car-pro ul {
+  float: left;
+  margin-left: 15px;
+}
+.car .car-main form .car-pro ul li {
+  float: left;
+  width: 100px;
+  margin-left: 35px;
+  text-align: center;
+}
+.car .car-main form .car-pro ul li a {
+  color: #000;
+}
+.car .car-main form .car-pro ul li p {
+  margin-top: 5px;
+}
+.car .car-main form .car-pro ul li:first-child {
+  width: 450px;
+  margin-left: 0;
+  margin-right: 35px;
+  text-align: left;
+}
+.car .car-main form .car-pro ul .num-btn input {
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none;
+}
+.car .car-main form .car-pro ul .price-total {
+  color: #e21313;
+  font-weight: 600;
+}
+.car .car-bottom {
+  height: 60px;
+  background-color: #fff;
+  padding-left: 40px;
+}
+.car .car-bottom .bot-left {
+  float: left;
+  line-height: 60px;
+}
+.car .car-bottom .bot-left label {
+  margin-right: 10px;
+}
+.car .car-bottom .bot-left label input {
+  margin-right: 10px;
+}
+.car .car-bottom .bot-left a {
+  color: #000;
+}
+.car .car-bottom .bot-right {
+  float: right;
+}
+.car .car-bottom .bot-right .pay-btn {
+  float: right;
+  margin-left: 20px;
+}
+.car .car-bottom .bot-right .pay-btn a {
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  background: #e20000;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.car .car-bottom .bot-right .pay-price {
+  float: right;
+  height: 60px;
+  line-height: 60px;
+}
+.car .car-bottom .bot-right .pay-price p span {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+}

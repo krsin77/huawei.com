@@ -7,6 +7,7 @@
     <title>注册_华为账号</title>
     <link rel="stylesheet" href="../style/css/reset.css">
     <link rel="stylesheet" href="../style/css/reg.css">
+    <script src="../js/reg.js" type="module"></script>
 </head>
 
 <body>
@@ -20,16 +21,20 @@
     <div class="register">
         <div class="container">
             <div class="reg-form">
-                <form action="">
-                    <p class="form-title">华为帐号注册</p>
-                    <p class="form-login">已有账号，<a href="login.html">去登录&gt;</a></p>
-                    <input type="text" name="username" placeholder="请输入用户名">
-                    <input type="password" name="password" placeholder="请输入密码">
-                    <input type="text" name="phone" placeholder="请输入手机号">
-                    <input type="text" name="email" placeholder="请输入电子邮箱">
-                    <input type="text" name="address" placeholder="请输入地址">
-                    <input type="submit" name="register" value="注册">
-                </form>
+
+                <p class="form-title">华为帐号注册</p>
+                <p class="form-login">已有账号，<a href="login.html">去登录&gt;</a></p>
+                <input type="text" placeholder="请输入用户名" name="username" id="username">
+                <span class="username"></span>
+                <input type="password" name="password" placeholder="请输入密码" id="password">
+                <span class="password"></span>
+                <input type="text" name="phone" placeholder="请输入手机号" id="phone">
+                <span class="phone"></span>
+                <input type="text" name="email" placeholder="请输入电子邮箱" id="email">
+                <span class="email"></span>
+                <input type="text" name="address" placeholder="请输入地址">
+                <input type="submit" id="submit">
+
 
             </div>
         </div>
@@ -43,7 +48,7 @@
                     <a href="">华为帐号与云空间用户协议</a>
                     <a href="">关于华为帐号与云空间隐私的声明</a>
                     <a href="">常见问题</a>
-                    <a href="" style="border: none;">Cookies</a>
+                    <a href="">Cookies</a>
                 </span>
             </p>
             <p class="foot-bottom">华为帐号 版权所有 © 2011-2020</p>
