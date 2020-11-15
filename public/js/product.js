@@ -1,4 +1,5 @@
 import './library/jquery.js';
+// import './library/Z.js';
 import { baseUrl } from './library/config.js';
 import cookie from './library/cookie.js';
 
@@ -25,10 +26,12 @@ import cookie from './library/cookie.js';
 
             let template = `
             <div class="pro-left">
-                <div class="pro-img">
-                    <a href="">
-                        <img src="../${picture[1].src}" alt="">
-                    </a>
+                <div class="pro-img small">
+                    <img src="../${picture[1].src}" alt="">  
+                    <div class="movebox hide"></div>
+                </div>
+                <div class="big hide">
+                    <img src="../${picture[1].src}" alt="" class="bigpic">
                 </div>
             </div>
             <div class="pro-right">
@@ -60,18 +63,18 @@ import cookie from './library/cookie.js';
                         <div class="des-color">
                             <span>选择颜色</span>
                             <div class="des-phone">
-                                <ul class="clearfix">
-                                    <li>
-                                        <a href=""><img src="../${color[0].src}" alt=""><span>${color[0].color}</span></a>
+                                <ul class="colorred clearfix ">
+                                    <li class="">
+                                        <a href="javascript:"><img src="../${color[0].src}" alt=""><span>${color[0].color}</span></a>
                                     </li>
                                     <li>
-                                        <a href=""><img src="../${color[1].src}" alt=""><span>${color[1].color}</span></a>
+                                        <a href="javascript:"><img src="../${color[1].src}" alt=""><span>${color[1].color}</span></a>
                                     </li>
                                     <li>
-                                        <a href=""><img src="../${color[2].src}" alt=""><span>${color[2].color}</span></a>
+                                        <a href="javascript:"><img src="../${color[2].src}" alt=""><span>${color[2].color}</span></a>
                                     </li>
                                     <li>
-                                        <a href=""><img src="../${color[3].src}" alt=""><span>${color[3].color}</span></a>
+                                        <a href="javascript:"><img src="../${color[3].src}" alt=""><span>${color[3].color}</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -121,6 +124,74 @@ import cookie from './library/cookie.js';
                 alert('添加购物车成功！');
             });
             $('.detail-main').append(tempDetails);
+
+            $('.colorred>li').on('click', function() {
+                $(this).addClass('red').siblings().removeClass('red');
+            })
+
+            //放大镜
+            $(function() {
+                let movebox = $('.movebox'),
+                    bigpic = $('.bigpic'),
+                    small = $('.small'),
+                    big = $('.big');
+
+                // 鼠标悬浮
+                small.on('mouseover', function() {
+
+                    movebox.addClass('show');
+                    big.addClass('show');
+
+                    // movebox计算大小
+                    movebox.css({
+                        width: (small.width() * big.width() / bigpic.width()) + 'px',
+                        height: (small.height() * big.height() / bigpic.height()) + 'px'
+                    });
+
+
+                    //movebox
+                    small.on('mousemove', function(ev) {
+                        let top = ev.pageY - small.offset().top - movebox.height() / 2;
+                        let left = ev.pageX - small.offset().left - movebox.width() / 2;
+
+
+                        //比例计算
+                        let ratio = bigpic.width() / small.width(); // 比例需要大于1
+
+                        // 管理边界
+                        if (top <= 0) {
+                            top = 0;
+                        } else if (top >= small.height() - movebox.height()) {
+                            top = small.height() - movebox.height() - 2;
+                        }
+
+                        if (left <= 0) {
+                            left = 0;
+                        } else if (left >= small.width() - movebox.width()) {
+                            left = small.width() - movebox.width() - 2;
+                        }
+
+                        // 设置定位
+                        movebox.css({
+                            top: top + 'px',
+                            left: left + 'px'
+                        });
+
+                        // 移动大图
+                        bigpic.css({
+                            top: ratio * -top + 'px',
+                            left: ratio * -left + 'px'
+                        });
+                    });
+                });
+
+
+                // 鼠标离开事件
+                small.on('mouseout', function() {
+                    movebox.removeClass('show');
+                    big.removeClass('show');
+                });
+            })
         }
     });
 
@@ -153,5 +224,7 @@ import cookie from './library/cookie.js';
 
         cookie.set('shop', JSON.stringify(shop), 1);
     }
+
+
 
 })();

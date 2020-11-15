@@ -260,6 +260,9 @@
   margin-left: 35px;
   text-align: center;
 }
+.car .car-main form .car-pro ul li #remove {
+  cursor: pointer;
+}
 .car .car-main form .car-pro ul li a {
   color: #000;
 }

@@ -5,6 +5,9 @@
     line-height: 1px;
     box-shadow: 0 -5px 3px 0px rgb(216, 216, 216);
   }
+  .red{
+    border: 1px solid red !important;
+  }
   .line {
     margin: 10px 0;
     a {
@@ -20,11 +23,48 @@
     width: 450px;
     float: left;
     padding-right: 50px;
+    position: relative;
+    .show {
+      display: block!important;
+      }
+    .big {
+      float: left;
+      width: 400px;
+      height: 400px;
+      margin-left: 10px;
+      overflow: hidden;
+      position: absolute;
+      left: 500px;
+      top: 0;
+      z-index: 9999;
+      .bigpic {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+  }
+  .hide {
+    display: none;
+  }
     .pro-img {
       img { 
         width: 450px;
       }
     }
+      .small {
+      position: relative;
+      float: left;
+      width: 450px;
+      height: 450px;
+     
+      .movebox {
+        background-color: orange;
+        opacity: .2;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+      }
   }
   .pro-right {
     width: 700px;
@@ -114,10 +154,11 @@
         float: left;
         width: 100px;
         height: 40px;
-        border: 1px solid red;
+        border: 1px solid #ccc;
         border-radius: 3px;
         margin-right: 10px;
         text-align: center;
+        
         a {
           width: 100px;
           height: 40px;
