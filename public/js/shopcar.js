@@ -55,7 +55,7 @@ import { baseUrl } from './library/config.js';
                     template += `
                             <div class="pro-box clearfix">
                                 <label for="">
-                                    <input type="checkbox" class="check">
+                                    <input type="checkbox" class="check" checked>
                                 </label>
                                 <div class="car-pro">
                                     <a href="" class="pro-img">

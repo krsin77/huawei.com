@@ -100,7 +100,6 @@ import cookie from './library/cookie.js';
                 <div class="pro-buy clearfix">
                     <div class="buy-num left">
                         <input type="number" min="1" max="${res.num}" id="num" value="1">
-                        
                     </div>
                     <div class="pro-pay left">
                         <div class="pay-car left" id="additem">加入购物车</div>

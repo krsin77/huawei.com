@@ -236,7 +236,8 @@
 .search {
   height: 100px;
   float: right;
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 .search form {
   margin-top: 35px;
